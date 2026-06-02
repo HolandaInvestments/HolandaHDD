@@ -38,21 +38,21 @@ export const services = [
     title: "HDD Utility Installation",
     description:
       "Directional drilling solutions for underground installation of fiber optic cables, energy lines, water pipes, gas lines, and other utility infrastructure.",
-    image: "/images/utility-installation.svg",
+    image: "/images/utility-installation.jpg",
     href: "/services#utility-installation"
   },
   {
     title: "HDD Machine Repair & Maintenance",
     description:
       "Technical support, preventive maintenance, and corrective repair for directional drilling machines and field equipment.",
-    image: "/images/machine-maintenance.svg",
+    image: "/images/machine-maintenance.jpg",
     href: "/services#machine-support"
   },
   {
     title: "Operator & Locator Training",
     description:
       "Hands-on training programs for HDD machine operators and underground path locators, focused on safety, productivity, and field performance.",
-    image: "/images/operator-training.svg",
+    image: "/images/hdd-locator.jpg",
     href: "/services#training"
   }
 ];
@@ -61,32 +61,32 @@ export const portfolioItems = [
   {
     title: "Fiber Optic Network Installation",
     description: "Underground fiber pathways for telecom and broadband projects.",
-    image: "/images/fiber-optic-underground.svg"
+    image: "/images/fiber-optic-underground.jpg"
   },
   {
     title: "Utility Crossings",
     description: "Directional crossings under roads, sidewalks, and driveways.",
-    image: "/images/utility-installation.svg"
+    image: "/images/utility-installation.jpg"
   },
   {
     title: "Water and Gas Line Preparation",
     description: "Trenchless preparation for critical underground utilities.",
-    image: "/images/hdd-drilling-hero.svg"
+    image: "/images/hdd-drilling-hero.jpg"
   },
   {
     title: "HDD Equipment Maintenance",
     description: "Machine diagnostics, preventive maintenance, and repair support.",
-    image: "/images/machine-maintenance.svg"
+    image: "/images/machine-maintenance.jpg"
   },
   {
     title: "Field Training Sessions",
     description: "Practical operator and locator training at real jobsite conditions.",
-    image: "/images/locator-training.svg"
+    image: "/images/locator-training.jpg"
   },
   {
     title: "Infrastructure Project Support",
     description: "Technical guidance for contractors and utility companies.",
-    image: "/images/operator-training.svg"
+    image: "/images/field-training.jpg"
   }
 ];
 

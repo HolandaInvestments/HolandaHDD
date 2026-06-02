@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "About Holanda Investments",
     description:
       "A practical HDD partner for contractors, utility companies, and infrastructure businesses.",
-    images: ["/images/operator-training.svg"]
+    images: ["/images/holanda-investments-logo.jpg"]
   }
 };
 
@@ -53,7 +53,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-            <Image src="/images/operator-training.svg" alt="HDD field training and technical support team" fill className="object-cover" priority />
+            <Image src="/images/holanda-investments-logo.jpg" alt="HDD field training and technical support team" fill className="object-cover" priority />
           </div>
         </div>
       </section>

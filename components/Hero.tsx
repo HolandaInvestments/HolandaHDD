@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative isolate min-h-[calc(100svh-var(--header-height))] overflow-hidden bg-graphite text-white">
       <Image
-        src="/images/hdd-drilling-hero.svg"
+        src="/images/hdd-drilling-hero.jpg"
         alt="Horizontal directional drilling equipment at an underground utility jobsite"
         fill
         priority

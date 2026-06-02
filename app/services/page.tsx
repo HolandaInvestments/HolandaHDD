@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "HDD Services | Holanda Investments",
     description:
       "Horizontal Directional Drilling services, machine support, maintenance, and practical operator training.",
-    images: ["/images/utility-installation.svg"]
+    images: ["/images/bore-path.jpg"]
   }
 };
 
@@ -21,7 +21,7 @@ const serviceDetails = [
   {
     id: "utility-installation",
     title: "Horizontal Directional Drilling for Utilities",
-    image: "/images/utility-installation.svg",
+    image: "/images/bore-path.jpg",
     description:
       "Holanda Investments provides HDD services for underground passage of utilities using trenchless methods, helping reduce surface disruption and improve project efficiency.",
     applications: [
@@ -39,7 +39,7 @@ const serviceDetails = [
   {
     id: "machine-support",
     title: "HDD Machine Repair and Maintenance",
-    image: "/images/machine-maintenance.svg",
+    image: "/images/machine-maintenance.jpg",
     description:
       "Technical support for HDD machines and related equipment, including preventive maintenance, troubleshooting, and repair guidance.",
     applications: [
@@ -55,7 +55,7 @@ const serviceDetails = [
   {
     id: "training",
     title: "Operator and Locator Training",
-    image: "/images/locator-training.svg",
+    image: "/images/hdd-locator.jpg",
     description:
       "In-person practical training for HDD machine operators and underground path locators.",
     applications: [
