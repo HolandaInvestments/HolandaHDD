@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">HDD machine maintenance</title>
+  <desc id="desc">Technical maintenance and repair support for directional drilling equipment.</desc>
+  <rect width="1200" height="800" fill="#17212b"/>
+  <rect x="110" y="430" width="980" height="120" rx="18" fill="#273849"/>
+  <rect x="210" y="290" width="410" height="190" rx="18" fill="#f59e0b"/>
+  <rect x="650" y="340" width="190" height="110" rx="12" fill="#ea580c"/>
+  <circle cx="300" cy="570" r="78" fill="#0f172a"/>
+  <circle cx="300" cy="570" r="34" fill="#94a3b8"/>
+  <circle cx="760" cy="570" r="78" fill="#0f172a"/>
+  <circle cx="760" cy="570" r="34" fill="#94a3b8"/>
+  <path d="M870 235 L960 325 M960 235 L870 325" stroke="#e2e8f0" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="915" cy="280" r="120" fill="none" stroke="#e2e8f0" stroke-width="22"/>
+  <path d="M130 185 H510 M130 225 H420" stroke="#e2e8f0" stroke-width="10" opacity=".35" stroke-linecap="round"/>
+</svg>

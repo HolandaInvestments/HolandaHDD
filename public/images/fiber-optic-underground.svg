@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Fiber optic underground installation</title>
+  <desc id="desc">Underground fiber optic conduits installed using trenchless construction.</desc>
+  <rect width="1200" height="800" fill="#f4f7f9"/>
+  <rect y="470" width="1200" height="330" fill="#273849"/>
+  <path d="M0 500 C190 460 330 535 520 495 C740 450 900 510 1200 455 L1200 800 L0 800 Z" fill="#17212b"/>
+  <path d="M90 635 C270 580 420 680 580 620 C760 555 900 640 1110 585" fill="none" stroke="#f59e0b" stroke-width="24" stroke-linecap="round"/>
+  <path d="M95 675 C290 620 430 720 600 662 C785 595 930 680 1120 625" fill="none" stroke="#38bdf8" stroke-width="14" stroke-linecap="round"/>
+  <rect x="120" y="210" width="360" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="170" y="260" width="260" height="18" rx="9" fill="#273849"/>
+  <rect x="170" y="305" width="220" height="18" rx="9" fill="#f59e0b"/>
+  <rect x="720" y="160" width="260" height="260" rx="18" fill="#273849"/>
+  <circle cx="850" cy="290" r="82" fill="#f59e0b"/>
+  <circle cx="850" cy="290" r="38" fill="#17212b"/>
+</svg>

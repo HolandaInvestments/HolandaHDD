@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">HDD operator training</title>
+  <desc id="desc">Hands-on operator training for horizontal directional drilling equipment.</desc>
+  <rect width="1200" height="800" fill="#f4f7f9"/>
+  <rect y="520" width="1200" height="280" fill="#273849"/>
+  <circle cx="300" cy="320" r="78" fill="#f59e0b"/>
+  <rect x="225" y="400" width="150" height="210" rx="45" fill="#17212b"/>
+  <circle cx="535" cy="300" r="70" fill="#f59e0b"/>
+  <rect x="465" y="382" width="145" height="210" rx="42" fill="#334155"/>
+  <rect x="700" y="280" width="250" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <path d="M740 330 H910 M740 370 H880" stroke="#273849" stroke-width="12" stroke-linecap="round"/>
+  <rect x="710" y="555" width="220" height="50" rx="25" fill="#f59e0b"/>
+  <circle cx="740" cy="630" r="54" fill="#0f172a"/>
+  <circle cx="900" cy="630" r="54" fill="#0f172a"/>
+</svg>
