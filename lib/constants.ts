@@ -81,7 +81,7 @@ export const portfolioItems = [
   {
     title: "Field Training Sessions",
     description: "Practical operator and locator training at real jobsite conditions.",
-    image: "/images/locator-training.jpg"
+    image: "/images/locator-machine.jpg"
   },
   {
     title: "Infrastructure Project Support",
