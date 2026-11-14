@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import SEO from "@/components/SEO";
-import { siteConfig } from "@/lib/constants";
+import { displayPhone, emailHref, phoneHref, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -37,8 +37,8 @@ export default function ContactPage() {
               machine maintenance, training information, or simply send us a message.
             </p>
             <div className="mt-8 rounded-lg bg-fog p-5 text-sm leading-6 text-slate-700">
-              <p><strong>Email:</strong> {siteConfig.email}</p>
-              <p><strong>Phone/WhatsApp:</strong> {siteConfig.phone}</p>
+              <p><strong>Email:</strong>{" "}<a href={emailHref} className="underline">{siteConfig.email}</a></p>
+              <p><strong><a href={phoneHref} className="underline">{displayPhone}</a></p>
               <p><strong>Service Area:</strong> {siteConfig.serviceArea}</p>
             </div>
           </div>
