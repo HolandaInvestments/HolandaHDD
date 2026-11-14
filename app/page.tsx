@@ -1,78 +1,63 @@
 import type { Metadata } from "next";
-import CTASection from "@/components/CTASection";
-import Hero from "@/components/Hero";
-import PortfolioGrid from "@/components/PortfolioGrid";
+import ContactForm from "@/components/ContactForm";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import SEO from "@/components/SEO";
-import ServiceCard from "@/components/ServiceCard";
-import { services, siteConfig } from "@/lib/constants";
+import { displayPhone, emailHref, phoneHref, siteConfig, whatsappHref } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Horizontal Directional Drilling Services",
+  title: "Contact",
   description:
-    "Professional HDD services for underground utilities, fiber optic installation, HDD machine repair, maintenance, and operator training.",
+    "Contact Holanda Investments to request HDD service, machine maintenance, operator training, locator training, or general project support.",
   openGraph: {
-    title: "Horizontal Directional Drilling Services | Holanda Investments",
+    title: "Contact Holanda Investments",
     description:
-      "HDD utility installation, machine support, and field training for contractors and infrastructure teams.",
+      "Request HDD utility installation, machine repair, maintenance support, or in-person training.",
     images: ["/images/hdd-drilling-hero.svg"]
   }
 };
 
-const advantages = [
-  "Technical field experience",
-  "Practical HDD knowledge",
-  "Safety-focused operation",
-  "Support for infrastructure projects",
-  "Training for operators and locators",
-  "Reliable service for contractors and utility companies"
-];
-
-export default function HomePage() {
+export default function ContactPage() {
   return (
     <>
       <SEO
         schema={{
-          "@type": "Organization",
-          name: siteConfig.name,
-          description: siteConfig.description,
-          email: siteConfig.email,
-          telephone: `+${siteConfig.phone}`
+          "@type": "ContactPage",
+          name: "Contact Holanda Investments",
+          description: "Contact page for HDD services, machine support, and training requests.",
+          url: `${siteConfig.siteUrl}/contact`
         }}
       />
-      <Hero />
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-wide text-ember">Core Services</p>
-            <h2 className="mt-3 text-3xl font-bold text-graphite">HDD services, equipment support, and practical training</h2>
-          </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="bg-graphite px-4 py-16 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-safety">Why Choose Holanda Investments</p>
-            <h2 className="mt-3 text-3xl font-bold">Clear technical support for demanding field conditions</h2>
-            <p className="mt-4 text-slate-300">
-              We help contractors and utility companies plan, execute, maintain, and train for trenchless underground infrastructure work.
+            <p className="text-sm font-bold uppercase tracking-wide text-ember">Contact</p>
+            <h1 className="mt-3 text-4xl font-bold text-graphite">Contact Holanda Investments</h1>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              Tell us what you need and our team will review your request. You can request HDD service,
+              machine maintenance, training information, or simply send us a message.
             </p>
+            <div className="mt-8 rounded-lg bg-fog p-5 text-sm leading-6 text-slate-700">
+              <p>
+                <strong>Email:</strong>{" "}
+                <a href={emailHref} className="underline">{siteConfig.email}</a>
+              </p>
+              <p>
+                <strong>Phone:</strong>{" "}
+                <a href={phoneHref} className="underline">{displayPhone}</a>
+              </p>
+              <p>
+                <strong>WhatsApp:</strong>{" "}
+                <a href={whatsappHref} className="underline" target="_blank" rel="noreferrer">
+                  Chat on WhatsApp
+                </a>
+              </p>
+              <p><strong>Service Area:</strong> {siteConfig.serviceArea}</p>
+            </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {advantages.map((item) => (
-              <div key={item} className="rounded-lg border border-white/10 bg-white/5 p-4 text-sm font-semibold text-slate-100">
-                {item}
-              </div>
-            ))}
-          </div>
+          <ContactForm />
         </div>
       </section>
-      <PortfolioGrid />
-      <CTASection />
+      <ChatbotWidget />
     </>
   );
 }
