@@ -4,9 +4,9 @@ export const siteConfig = {
     "Horizontal Directional Drilling, HDD machine support, and professional field training.",
   description:
     "Holanda Investments provides professional Horizontal Directional Drilling services, underground utility installation, HDD machine repair, maintenance support, and hands-on operator and locator training for infrastructure teams.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com",
-  email: process.env.CONTACT_TO_EMAIL || "contact@company.com",
-  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15550000000",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://hdd.holandainvestments.com",
+  email: process.env.CONTACT_TO_EMAIL || "hdd@holandainvestments.com",
+  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "17542526813",
   serviceArea: "Available by project location",
   whatsappMessage:
     "Hello, I would like more information about Holanda Investments HDD services.",
