@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 import { ContactPayload } from "@/lib/validation";
-import { siteConfig } from "@/lib/constants";
+import { displayPhone, phoneHref, siteConfig, whatsappHref } from "@/lib/constants";
 
 function field(label: string, value?: string) {
   return value ? `<p><strong>${label}:</strong> ${value}</p>` : "";
@@ -38,32 +38,41 @@ export function buildAdminEmail(data: ContactPayload) {
 
 export async function sendContactEmails(data: ContactPayload) {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || siteConfig.email;
-  const from = process.env.CONTACT_FROM_EMAIL || "website@company.com";
+  const to = siteConfig.email;
+  const from = process.env.CONTACT_FROM_EMAIL?.trim();
 
-  if (!apiKey) {
-    console.warn("RESEND_API_KEY is not configured. Skipping email delivery.");
-    return { skipped: true };
+  if (!apiKey || !from) {
+    throw new Error("Contact email requires RESEND_API_KEY and CONTACT_FROM_EMAIL.");
   }
 
   const resend = new Resend(apiKey);
 
-  await resend.emails.send({
+  const delivery = await resend.emails.send({
     from,
     to,
     subject: `New ${data.requestType} request - Holanda Investments`,
     html: buildAdminEmail(data)
   });
 
-  await resend.emails.send({
-    from,
-    to: data.email || "",
-    subject: "We received your request - Holanda Investments",
-    html: `
-      <p>Thank you for contacting Holanda Investments. Our team received your request and will review the information shortly.</p>
-      <p>If your request is urgent, please contact us by phone or WhatsApp.</p>
-    `
-  });
+  if (delivery.error) {
+    throw new Error(`Contact email delivery failed: ${delivery.error.message}`);
+  }
 
-  return { skipped: false };
+  try {
+    const confirmation = await resend.emails.send({
+      from,
+      to: data.email || "",
+      subject: "We received your request - Holanda Investments",
+      html: `
+        <p>Thank you for contacting Holanda Investments. Our team received your request and will review the information shortly.</p>
+        <p>For urgent requests, <a href="${phoneHref}">call us at ${displayPhone}</a> or <a href="${whatsappHref}">chat with us on WhatsApp</a>.</p>
+      `
+    });
+
+    if (confirmation.error) {
+      console.error("Contact confirmation failed:", confirmation.error.message);
+    }
+  } catch (error) {
+    console.error("Contact confirmation failed:", error);
+  }
 }

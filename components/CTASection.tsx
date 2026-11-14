@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { MessageCircle, Send } from "lucide-react";
-import { siteConfig } from "@/lib/constants";
+import { whatsappHref } from "@/lib/constants";
 
 export default function CTASection() {
-  const whatsappHref = `https://wa.me/${siteConfig.phone}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
-
   return (
     <section className="bg-steel px-4 py-14 text-white sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">

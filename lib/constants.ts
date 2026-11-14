@@ -5,8 +5,8 @@ export const siteConfig = {
   description:
     "Holanda Investments provides professional Horizontal Directional Drilling services, underground utility installation, HDD machine repair, maintenance support, and hands-on operator and locator training for infrastructure teams.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://hdd.holandainvestments.com",
-  email: process.env.CONTACT_TO_EMAIL || "hdd@holandainvestments.com",
-  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "17542526813",
+  email: process.env.CONTACT_TO_EMAIL?.trim() || "hdd@holandainvestments.com",
+  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || "17542526813",
   serviceArea: "Available by project location",
   whatsappMessage:
     "Hello, I would like more information about Holanda Investments HDD services.",
@@ -30,6 +30,11 @@ export const displayPhone = siteConfig.phone.replace(
   /^1(\d{3})(\d{3})(\d{4})$/,
   "+1 ($1) $2-$3"
 );
+
+export const phoneHref = `tel:+${siteConfig.phone}`;
+export const emailHref = `mailto:${siteConfig.email}`;
+export const whatsappHref =
+  `https://wa.me/${siteConfig.phone}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
 
 export const navLinks = [
   { href: "/", label: "Home" },

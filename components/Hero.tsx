@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Send, Wrench } from "lucide-react";
-import { displayPhone, siteConfig } from "@/lib/constants";
+import { whatsappHref } from "@/lib/constants";
 
 export default function Hero() {
-  const whatsappHref = `https://wa.me/${siteConfig.phone}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
-
   return (
     <section className="relative isolate min-h-[calc(100svh-var(--header-height))] overflow-hidden bg-graphite text-white">
       <Image

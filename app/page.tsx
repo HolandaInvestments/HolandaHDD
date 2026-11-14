@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import SEO from "@/components/SEO";
 import ServiceCard from "@/components/ServiceCard";
-import {displayPhone, services, siteConfig } from "@/lib/constants";
+import { services, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Horizontal Directional Drilling Services",
@@ -36,7 +36,7 @@ export default function HomePage() {
           name: siteConfig.name,
           description: siteConfig.description,
           email: siteConfig.email,
-          telephone: siteConfig.phone
+          telephone: `+${siteConfig.phone}`
         }}
       />
       <Hero />

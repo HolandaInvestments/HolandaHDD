@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks, siteConfig } from "@/lib/constants";
+import { displayPhone, navLinks, emailHref, phoneHref, whatsappHref, siteConfig } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -27,8 +27,9 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wide text-slate-200">Contact</h3>
           <div className="mt-4 space-y-3 text-sm text-slate-300">
-            <p>Email: {siteConfig.email}</p>
-            <p>Phone/WhatsApp: {siteConfig.phone}</p>
+            <p><strong>Email:</strong>{" "}<a href={emailHref} className="underline">{siteConfig.email}</a></p>
+            <p><strong>Phone:</strong>{" "}<a href={phoneHref} className="underline">{displayPhone}</a></p>
+            <p><strong>WhatsApp:</strong>{" "}<a href={whatsappHref} className="underline" target="_blank" rel="noreferrer">Chat on WhatsApp</a></p>
             <p>Service Area: {siteConfig.serviceArea}</p>
           </div>
         </div>

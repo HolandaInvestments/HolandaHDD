@@ -26,7 +26,8 @@ export default function ContactForm() {
     setStatus("loading");
     setMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -43,7 +44,7 @@ export default function ContactForm() {
 
       setStatus("success");
       setMessage("Thank you. Your request was sent successfully.");
-      event.currentTarget.reset();
+      form.reset();
       setRequestType("HDD Utility Installation");
     } catch (error) {
       setStatus("error");
@@ -74,7 +75,7 @@ export default function ContactForm() {
         <Field name="fullName" label="Full Name" required />
         <Field name="companyName" label="Company Name" required />
         <Field name="email" label="Email" type="email" required />
-        <Field name="phone" label="Phone" required />
+        <Field name="phone" label="Phone" type="tel" required />
         <Field name="city" label="City" required />
         <Field name="state" label="State" required />
 
