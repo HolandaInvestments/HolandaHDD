@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Send, Wrench } from "lucide-react";
-import { siteConfig } from "@/lib/constants";
+import { displayPhone, siteConfig } from "@/lib/constants";
 
 export default function Hero() {
   const whatsappHref = `https://wa.me/${siteConfig.phone}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`;
