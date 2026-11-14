@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import SEO from "@/components/SEO";
 import ServiceCard from "@/components/ServiceCard";
-import { services, siteConfig } from "@/lib/constants";
+import {displayPhone, services, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Horizontal Directional Drilling Services",

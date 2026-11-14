@@ -26,6 +26,11 @@ export const siteConfig = {
   ]
 };
 
+export const displayPhone = siteConfig.phone.replace(
+  /^1(\d{3})(\d{3})(\d{4})$/,
+  "+1 ($1) $2-$3"
+);
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
