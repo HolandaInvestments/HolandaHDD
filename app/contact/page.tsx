@@ -38,7 +38,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-8 rounded-lg bg-fog p-5 text-sm leading-6 text-slate-700">
               <p><strong>Email:</strong>{" "}<a href={emailHref} className="underline">{siteConfig.email}</a></p>
-              <p><strong><a href={phoneHref} className="underline">{displayPhone}</a></p>
+              <p><strong>Phone/WhatsApp:</strong>{" "}<a href={phoneHref} className="underline">{displayPhone}</a></p>
               <p><strong>Service Area:</strong> {siteConfig.serviceArea}</p>
             </div>
           </div>
